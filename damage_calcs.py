@@ -32,12 +32,12 @@ def roll_dice(dice_roll):
 
     return total
 
-def attack_simulation(num_attacks,ac,to_hit_mod,damage_dice,advatage=False):
+def attack_simulation(num_attacks,ac,to_hit_mod,damage_dice,advantage=False):
     hits = 0
     total_damage = 0
 
     for _ in range(num_attacks):
-        if advatage:
+        if advantage:
             attack_roll = max(roll_dice("1d20"),roll_dice("1d20"))+to_hit_mod
         else:
             attack_roll = roll_dice("1d20")+to_hit_mod
