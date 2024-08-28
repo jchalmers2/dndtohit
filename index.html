@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Damage Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>D&D Damage Calculator</h1>
+        <label for="numAttacks">Number of Attacks:</label>
+        <input type="number" id="numAttacks" min="1"><br><br>
+
+        <label for="ac">AC (Armor Class):</label>
+        <input type="number" id="ac" min="1"><br><br>
+
+        <label for="toHitMod">To Hit Modifier:</label>
+        <input type="number" id="toHitMod"><br><br>
+
+        <label for="damageDice">Damage Dice (e.g., 3d8, 2d4+2):</label>
+        <input type="text" id="damageDice"><br><br>
+
+        <label for="advantage">Do you have advantage?</label>
+        <select id="advantage">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="clearResults()">Clear</button><br><br>
+
+        <div class="result">
+            <p id="numHits"></p>
+            <p id="totalDamage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
